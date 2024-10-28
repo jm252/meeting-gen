@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>meeting-gen ai</title>
+    <title>MeetingGen.AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}" defer></script>
 </head>
 <body>
-    <h1>Hello</h1>
+    <header>
+        <h1>MeetingGen.AI</h1>
+        <p>Enhanced Meeting Transcription Generator</p>
+    </header>
+    <main>
+        <div class="upload-area" id="upload-area">
+            <h2>Select or Drop MP4 Files Here</h2>
+            <p>Only MP4 files are supported.</p>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" id="file-input" name="file" accept=".mp4" hidden multiple />
+                <button type="button" id="file-select">Choose File</button>
+                <div id="file-list"></div> <!-- Display selected files -->
+            </form>
+        </div>
+        <button id="generate-btn" class="generate-btn" disabled>
+            Generate Enhanced Meeting Transcript
+        </button>
+    </main>
 </body>
 </html>
