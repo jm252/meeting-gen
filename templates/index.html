@@ -16,15 +16,16 @@
         <div class="upload-area" id="upload-area">
             <h2>Select or Drop MP4 Files Here</h2>
             <p>Only MP4 files are supported.</p>
-            <form action="/upload" method="POST" enctype="multipart/form-data">
+            <!-- Form handles both upload and generation -->
+            <form id="generate-form" action="/generate" method="POST" enctype="multipart/form-data">
                 <input type="file" id="file-input" name="file" accept=".mp4" hidden multiple />
                 <button type="button" id="file-select">Choose File</button>
                 <div id="file-list"></div> <!-- Display selected files -->
+                <button id="generate-btn" class="generate-btn" type="submit" disabled>
+                    Generate Enhanced Meeting Transcript
+                </button>
             </form>
         </div>
-        <button id="generate-btn" class="generate-btn" disabled>
-            Generate Enhanced Meeting Transcript
-        </button>
     </main>
 </body>
 </html>

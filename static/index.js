@@ -32,7 +32,7 @@ uploadArea.addEventListener('drop', (event) => {
     handleFiles({ target: { files } });
 });
 
-// Display selected files (only MP4) and enable button
+// Display selected files (only MP4) and enable generate button
 function handleFiles(event) {
     const files = event.target.files;
     fileList.innerHTML = ''; // Clear the list

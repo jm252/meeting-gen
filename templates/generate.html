@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript Generated</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>MeetingGen.AI</h1>
+        <p>Your transcript has been successfully generated!</p>
+    </header>
+    <main>
+        <p>Click the link below to download your transcript:</p>
+        <a href="{{ url_for('static', filename='uploads/transcript.txt') }}" download>
+            Download Transcript
+        </a>
+    </main>
+</body>
+</html>
