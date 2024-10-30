@@ -8,3 +8,9 @@ instance/
 .env
 *.env
 *.log
+
+# Ignore virtual environment directory
+env/
+
+# Ignore all files and folders in static/uploads
+static/uploads/

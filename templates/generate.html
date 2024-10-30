@@ -12,7 +12,16 @@
         <p>Your transcript has been successfully generated!</p>
     </header>
     <main>
-        <p>Click the link below to download your transcript:</p>
+        <p>Here is your transcript:</p>
+        <div class="transcript-container">
+            {% for item in transcript_data %}
+                <div class="transcript-section">
+                    <p>{{ item.text }}</p>
+                    <img src="{{ url_for('static', filename=item.image) }}" alt="Screen Image" style="width: 50%; height: auto;">
+                </div>
+            {% endfor %}
+        </div>
+        <p>You can also download your transcript:</p>
         <a href="{{ url_for('static', filename='uploads/transcript.txt') }}" download>
             Download Transcript
         </a>

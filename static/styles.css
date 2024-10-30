@@ -25,23 +25,33 @@ main {
     gap: 20px;
 }
 
-.upload-area {
-    background-color: white;
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    width: 60%;
-    max-width: 500px;
-    padding: 40px;
-    text-align: center;
-    color: black;
-    transition: border-color 0.3s, border-width 0.3s;
+.transcript-container {
+    width: 80%;
+    max-width: 800px;
+    background-color: #001a33;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 80vh;
 }
 
-.upload-area.drag-over {
-    border-color: #00b300; /* Green color */
-    border-width: 4px;     /* Bolder border */
+.transcript-section {
+    margin-bottom: 20px;
 }
 
+.transcript-section p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.transcript-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Existing styles for other elements */
 button {
     background-color: #00204a;
     color: white;
@@ -65,13 +75,13 @@ button:hover {
     font-weight: bold;
     border-radius: 10px;
     cursor: not-allowed;
-    background-color: #777; /* Dull color when disabled */
+    background-color: #777;
     color: #ccc;
     transition: background-color 0.3s;
 }
 
 .generate-btn.active {
-    background-color: #00b300; /* Green when enabled */
+    background-color: #00b300;
     color: white;
     cursor: pointer;
 }
